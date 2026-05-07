@@ -26,6 +26,7 @@ const server = http.createServer((req, res) => {
 
 });
 
-server.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+// 0.0.0.0 tells the server to listen on all available network interfaces
+app.listen(3000, '0.0.0.0', () => {
+    console.log('Server is live and accessible at your Public IP on port 3000');
 });
